@@ -1,0 +1,43 @@
+arithmetic expansion
+
+	arithmetic expansion uses the form:
+
+	$((expression))
+		where expression is an arithmetic expression consiting of values and arithemetic operators. 
+
+
+brace expansion
+	
+	multiple text strings crated from a pattern containing braces
+	most common application is to make list of files/ directories to be created
+	eg
+		echo {Z..A}{A..Z}
+			will print out all two letter combinations
+
+		echo {A,B,C}hello
+			will print out Ahello, Bhello, Chello
+
+
+			
+quotes
+	double quotes
+		place text inside quotes, all special cahracters within lose the special meaning, treated as normal chars.
+			this does not extend to $, /, `, which have special meanings
+			within strings. 
+
+		eg useful for referring to filenames that have spaces. 
+
+		however, expansion still occurs in double quotes (including
+		parameter expansion and arithmetic expansion)
+
+		word splitting is suppressed, embedded space not treated as delimitiers, becoming themselves part of the argument. 
+
+	single quotes
+		using single quotes supppresses ALL expansions. 
+
+	\
+		the escape backslash character suppresses a given expansion
+		in double quotes
+		suppress characters that would usually have a special meaning
+		to the shell (eg |)
+		can also be used to insert special characters into the text

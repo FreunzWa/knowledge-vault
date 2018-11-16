@@ -1,0 +1,7 @@
+programming questions
+
+
+c++
+	pointers
+	features in c++ not in for example python
+	history of c++ briefly.

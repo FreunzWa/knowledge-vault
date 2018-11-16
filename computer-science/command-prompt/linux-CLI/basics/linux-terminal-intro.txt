@@ -1,0 +1,71 @@
+Area: Linux CLI introduction
+
+
+NOTES
+========
+
+Layout of CLI
+	~#
+		designates superuser (has ++administrative privileges)
+	~$
+		designates rootusetetes rootuses rootuser
+
+
+Shortcuts/ controls
+	middle-button
+		copies highlighted text in another window into the terminal
+
+
+
+GLOSSARY
+========
+
+root-directory
+	contains all files and subdirs
+	linux does not have drive letters, all files are in one massive tree
+
+usr/bin
+	the root directory ontains all files
+
+~
+	tilde expansion
+	when used at the beginning of a word, it expands into the name of
+	the home directory of the named user, or the home dir of the current user.
+
+.
+	refers to the working directroy
+
+.. 
+	refers to the directory's parent dir
+
+/ 
+	the root directory, where the file system begins. usu only contains subds
+/boot
+	linux kernel and boot loader files are kept
+/etc
+	contains config files for the systems
+	/etc/passwd (user information)
+	/etc/fstab (devices ounted when system boots)
+	/etc/hosts	 (network hostnames and IP addresses known to the system)
+/bin
+	contains essential programs system needs to operate
+/usr/bin
+	user software
+/var
+	contains files that changes as the sysem is running
+	/var/logs
+		dir that contains logfiles, updated constantly. 
+	
+/lib
+	shared libraries kept here (similar to DLLs)
+/home
+	users keep personal files here, should only write things here in general
+/root
+	superuser home dir
+/tmp
+	programs write temporary files here
+/dev
+	contains devices linked to the system
+
+hidden files
+	hidden files have a period '.' at the start of the filename

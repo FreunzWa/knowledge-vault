@@ -1,0 +1,17 @@
+Aliases
+	easy way to create a new command which acts as an abbrev
+	for a longer one. following syntax:
+
+		alias name = value
+
+		(value executed whenever name is entered into the command line])
+
+		to create an alis, wite the alias at the end of the .bashrc file. this will create a permanent alias
+		a tmeporary alias for the current sesison can be written with the standard convention ito the temrinal session. 
+
+		can create shell functions with () {} like writing a standard function.
+		
+
+when running a script, can simply type name if in the path, otherwise must
+specify the path to the script. if in the current directory, then type
+./ folloewd by the name of the program,

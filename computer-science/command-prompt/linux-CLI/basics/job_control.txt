@@ -1,0 +1,32 @@
+job control
+
+tasks running apparently simulanteneously @queueing at the CPU to get 
+processing time.
+
+controlling processes commands:
+
+ps
+	list processes running on teh system, more powerful than jobs
+	
+
+kill
+	send a signal to one or more processes, usu to kill the process
+	can either kill by PPID number of job number
+		job number kill:
+			kill %1
+		ppid kill
+			kill 1200
+
+	if still unreposneive, can increase the power of the commands by adding
+	keywords:
+		kill -SIGTERM 2300
+		kill -SIGKILL 2300
+
+jobs
+	alternate way to list processes
+
+bg 
+	make background process
+
+fg 
+	make foreground process

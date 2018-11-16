@@ -1,0 +1,76 @@
+Shell scripts is a file containing serise of commands, the teerminal
+reads the file line by line and executes them.
+
+Writing first scripts:
+----------------------
+
+steps
+	1. write script
+	2. give shell permission to exec it
+	3. put it somehwerhe where shell can find it (like in the PATH)
+
+the path is the tree of directories that the shell will search to find a
+given command/script. to show the PATH, type echo $PATH. if command exist butnot in teh path, it will return the command not found messag.e
+customary to put all new scrpts into teh bin folder in teh home dir, which is already in teh path. 
+
+
+the shell script file consists of ASCII text, use a text editor. 
+examples of text editor (vim/ vi, emacs, nano, gedit, kwrite)
+
+
+first line of the script is the shebang
+
+shebang
+	first line of script gien to shell indicate what program is used
+	to interpret teh script (eg bash/ python etc.)
+further lines are comments.
+
+
+
+Editing scripts:
+===================
+
+environment
+	information regarding the system, eg path, username, name of file where mail is delivered. 
+
+	set 
+		command to view the contents of the environment
+
+	two types of command contained in the enironment: aliases and shell functions
+
+	establishing the environment
+		@log into system == bash program starts, reads series of config scripts termed startup files, define teh default env
+		shared @all users. more startup files in home dir set up personal
+		environemnt.  login shell session (user and passwrod prompt)
+		non login shell session when launch terminal session
+		
+
+
+here script:
+=======================
+a here script is an additional form of I/O redirection, provinding a way to include content that will be given to standard output of a command. 
+
+command << token
+content to be used as command'standard input token 
+
+
+
+variables:
+=========================
+
+
+define variable with:
+	name=value (eg string, integer etc) {no spaces are allowed in the definition/ assignment}
+	assign variable value to command result
+
+	name=$(command)
+	eg
+		result=$(1+1)
+
+call variable value with:
+	
+	$variable_name
+
+printenv
+	prints all of the variables along with their values in the current session. 
+

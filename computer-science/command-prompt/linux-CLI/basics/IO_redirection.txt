@@ -1,0 +1,77 @@
+
+
+standard output
+	standrad output of a CL program is directd to the display
+	to redirect standard output, use:
+
+		>
+			redirect standard output eg to a file
+			will overrwrite existing contents of the file
+			file will be created @does not exist.
+
+			eg
+				ls > file_list.txt
+					{no results will appear on the display}
+
+		>>
+			redirect standard output to a file, but will not
+			overwrite but rathe append to teh end of the file
+			file will be created @does not exist.
+
+
+standard input
+	by default gets input from the keyboard
+
+	< 
+		redirect contents of a file into cli
+
+		eg 
+			sort < file_list.txt
+
+
+
+Pipelines
+	
+	connect multiple comands together with pipelines.
+	the standard output is fed into the standard input of another program
+
+	eg 
+		ls -l | less
+			will display output of ls -l onto screen in scrolling form. 
+
+		ls -lt | head
+			display 10 newest files in . 
+
+		du | sort -nr
+			display list of dirs sorted by how much disk space they consume
+
+
+
+Filters
+	used in conjucntion with pipelines to change the output of a command 
+
+	sort
+	uniq	
+		remoes duplicate lines of data
+	grep
+		examines each line of data it receives from standard input and output every line that contains specified pattern of cahracters
+
+	fmt
+		reads text from standard input, then outputs formatted text on standard output
+
+	pr
+
+	heads
+		output first few lines of its input
+
+	tail
+		last few lines
+
+	tr 
+		tranlsation
+
+	sed
+		strea editor 
+
+	awk
+		programming languae designed for constructing filters

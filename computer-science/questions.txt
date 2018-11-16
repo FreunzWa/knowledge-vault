@@ -1,0 +1,5 @@
+computer science questions
+-----------------------------
+
+* how are low level programs organised? (folder heirarchy for BIOS, startup programs, like where is the BIOS located)
+* 

@@ -1,0 +1,114 @@
+C++ syntax
+---------------
+
+
+BASICS:
+=================================
+
+// 
+	comment line
+
+/* */
+	block comment
+
+#
+	lines beginning with # are directives read by the pre-processor
+	special lines read before interpreted before compile time
+
+	eg
+	#include
+		include a section of standard C++ code
+
+{}
+	braces for blocks of code
+
+;
+	statements are completed with a semicolon at the end. 
+
+
+NAMESPACES
+=============================
+eg cout is defined in the std namespace
+
+using namespace std;
+	imports the entire namespace, do not have to qualify as std::command
+	instead simply cout.
+
+
+BASIC INPUT/ OUPUT:
+====================
+
+cout << string
+
+special statements:
+	<< endl (goes to the next line before displaying next line.)
+
+
+
+FUNCTIONs:
+===========================
+
+<return type> <function name>() {statements}
+
+int main() {}
+	special function that is run when a cpp program is executed.
+
+
+
+VARIABLES:
+============================
+
+fundamental data types
+	
+	char types
+		char (1 byte in size)
+		char16_t 
+		char32_t 
+		wchar_t
+
+	signed integeres
+
+	unsigned integers
+
+	floating point
+
+	boolean
+
+	void
+
+	null pointer
+
+
+
+declaration
+
+<type> <name>;
+<type> <names separated by commas>;
+
+intiialisation
+
+<type> <name> = <value>;
+
+instead of explicitly stating the type, can also use auto to, the typeof the var is automatically set by the intialiser. 
+
+contstructor initilisation
+------
+<type> <name> <(initial_value)>; #note can also use curly braces in uniform initialisation.
+eg
+	int x (0);
+
+
+
+strings
+=========
+after including the string header, may use strings as a datatype like so:
+
+string my_string_name = "string name"
+
+normal escape characters apply 
+	/n
+	/r
+	/v
+	/t
+	etc.
+	

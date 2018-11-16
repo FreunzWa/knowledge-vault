@@ -1,0 +1,21 @@
+Introduction to command line interface
+
+NOTES
+========
+
+
+
+
+
+GLOSSARY
+========
+Shell
+	program that takes commands from user and gives to OS to perform.
+
+Terminal
+	a terminal emulator, a program that opens a window 
+	and allows interaction with the shell 
+	on linux, examples are gnome-terminal, konsole 
+
+working directory	
+	the directory currently operating in in the terminal window

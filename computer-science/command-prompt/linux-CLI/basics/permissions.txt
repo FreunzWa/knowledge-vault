@@ -1,0 +1,79 @@
+computer can have multiple user supported by the OS
+eg. whilst using the computer others can access teh computer via
+a secure shell (ssh) and operate hte computer. esp Unix systems. 
+originally unix designed to serve multiple / many users at the same time.
+
+on linux, each file and dir is assingedd access rights for the own er  fo the file. rights can be assigned to read a file/ write/ execute file. to see permission settings, use ls command. 
+
+
+
+FILE PERMISSIONS
+-------------------
+permission lsting format in ls
+
+-rwxrwxrwx
+
+first(rwx) specifies file owner permissions (read/write/execute)
+2nd rwx specifies pemissions for group owner of file
+3rd rwx specifies permissions for all other users
+
+binary conversion
+
+-111000000 (700), for 3 digit binary conversions
+only the file owner can read write or execute the file
+
+
+
+DIRECTORY PERMISSIONS
+-------------------------
+same octal notation pattern, but attributes different
+
+r
+	allows contents to be listed if x is also set
+x 	
+	allows dir to be entered
+w
+	allows file within the dir to be created/ manipulated etc.
+
+
+==============================================
+commands related to permissions
+
+
+
+chmod
+	change the permission os f file or dir
+	eg
+		chmod 600 some_file 
+			(this will give read and write permission
+			to owner, and bar other users from doing anything)
+	777
+		no restrictions/ permission, anybody may do anything (usu not good)
+	755
+		file owner may read/ write and exec the file, others may read and exec
+		common for programs used by all users
+	666
+		may read and write file all users
+	700
+		good for files owner wants to keep hiddne from others
+
+
+
+chown
+	change the ownership of a file. must be superuser
+
+chgrp
+	change group ownership of a file, must be superuser.
+
+
+
+============================================
+SUPER USER 
+
+may need to become superuser to perfrom important system admin taks. should not stay logged in @hacked. however programs like su and sudo can give temporary access
+
+su
+	opens a new windows for superuser. exit to finish
+
+sudo
+	sudo gives as needed basis for super user commands. 

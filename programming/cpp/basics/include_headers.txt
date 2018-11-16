@@ -1,0 +1,8 @@
+INCLUDES
+
+<iostream>	
+	input/ output stream, allows display to the shell etc./ accept input 
+	from the keyboard.
+
+<string>
+	must include the string header to use strings

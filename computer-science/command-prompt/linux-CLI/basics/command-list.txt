@@ -1,0 +1,146 @@
+Basics
+-----------------
+
+Structure:
+	command -options arguments
+
+Commands:
+	one of 4 different things
+
+	1. an executable program	
+		eg the ones in /usr/bin
+	2. a cmomand built into shell itself
+		called shell builtins (eg the cd command)
+	3. a shell function
+		shell scripts in the enironment
+	4. an alias
+		commands that define yourself built from other commands
+
+General options
+	--help
+		many exec programs support a --help option that display description of suppoerted syntax and options
+
+
+
+
+List of commands:
+-----------------
+
+pwd
+	print working directory
+	prints pathway to get to the parent directory
+
+
+cd
+	change directory
+	cd -pathname
+		specifies pathname of teh dir to change to
+		can use a relative pathname, the '.' is implied so 
+			you may omit the working directory '.' marker.
+	cd .. (.. means parent dir)
+		go to parent dir
+		. means current dir
+	cd 
+		cd followed by nothing goes to home dir.
+
+ls 
+	list contents of current directory (.)
+	follow by the pathname u want to ls (. is implied)
+	examples:
+		ls /bin 
+			list the files in teh /bin directory
+		ls -l
+			list the files in the . in long format
+		ls -l /etc /bin
+			lis the files in bin and etc dir in long format
+		ls -la
+			list all files, including the hidden ones (starting with .) in long format
+		ls -a
+			list all files, not in long format, including the hidden ones 
+
+less
+	view text files
+	use page and page down to navigate
+	press q to quit the viewer
+
+	less text_file
+		displays the text file, cannot edit. 
+
+		commands for less:
+			page up/ b
+				scroll back up one page
+			page down/ space
+				scroll down one page
+			G
+				go to the end of the text file
+			1G
+				go the beginning
+			/"search-string"
+				search for the string in quotes
+			n
+				repeat the previous search
+			h 
+				display a complete list less commands and options
+			q 
+				quit
+
+cat
+	similar to less, but simply output the contents of a file ot the terminal rather than entering a new interface supportive of more 
+	commands
+
+file
+	classify a file's contents
+	determines what kind of data file contains before viewing.
+
+	file name_of_file
+
+lpr
+	send input to printer
+
+ln
+	create a symbolic link
+
+cp
+	cp file1 file2
+mv
+	rename files or move files to a dir
+rm
+	removes files + directories
+
+mkdir
+	mkir dirname
+
+echo
+	prints text argument on standard output
+
+
+type
+	display information about command type
+	a shell builtin that display the type of command the shell with 
+	execute
+
+		type command
+			eg an alias, a shell builtin, or an executable
+
+			eg type ls
+				is an alias to ls --color==tty (why it is displayed in color!)
+
+which 
+	locate a command
+	useful @possible if more than one version installed on a system
+	only works for executable programs
+
+help 
+	display reference fpage for shell builtin
+
+	help followed by shell builtin
+
+	eg
+		help cd
+
+	help [-m]
+		changes format of output
+
+man
+	display online command reference
+	man followed by the name of the program to view online manual

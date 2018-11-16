@@ -1,0 +1,102 @@
+
+
+cp
+==========================================
+
+cp file1 file2
+	copies contents of file into file2
+	if file !exists == created, then overwritten
+
+cp -i file1 file2
+	user prompted @file2 exists to confirm overwrite action
+
+cp file1 dir1
+	copy file1 into dir1
+
+
+cp -R dir1 dir2
+	copies dir1 into dir2
+
+
+
+
+
+mv
+===========================================
+
+mv
+	mv file1 file2 (renaming action)
+	rename a file
+	@file2 !exists == file1 renamed file2,
+	@file2 exists == contents are silently replaced with contents of file1
+
+mv -i file1 file2
+	-i interactive mode
+
+mv file1 file2 file3 dir1
+	files are moved into dir1
+
+mv dir1 dir2
+	rename a dir
+
+
+rm 
+===========================================
+
+rm
+	rm file1 file2
+		delete files
+
+	rm -i file1 file2
+		prompt user before files deleted @interactive mode
+
+	rm -r dir1 dir2
+		recursive deletion, dir1 and dir2 are deleted along with all 
+		contents
+
+	CAREFUL!
+	construct coman with ls first to see exactly what is being deleted.
+
+
+
+
+
+wildcard matching
+===========================================
+
+*
+	all filenames
+g*
+	all filenames that begin with g
+b*.txt
+	all txt files that begin with b
+Data???
+	any filename that starts with  "Data" followed by any 3 chars
+[abc]*
+	any filename that begins with a,b or c followed by any other chars
+
+
+~~~
+character classes:
+	
+[[:upper:]]*
+	any filename that begins with an upper case letter
+BACKUP.[[:digit:]][[:digit:]]
+	any filename that starts with "BACKUP." folowed by 2 digits
+*[![:lower:]]
+	any filename that does not end with a lower case letter
+
+
+~~~~
+commands:
+	
+	cp *.txt text_files
+		copy all files in the current working directory with names ending in .txt to an existing directory name text_files
+
+	mv my_dir ../*.bak my_new_dir
+		move subdir my_dir and all files ending in .bak in parent directory 
+		to a new directory
+
+	rm *~
+		delete all files in current working dir that end in ~
+		many apps use ~ ending as a naming convention for backups
