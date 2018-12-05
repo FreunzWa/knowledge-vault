@@ -56,7 +56,9 @@ ls
 		ls -la
 			list all files, including the hidden ones (starting with .) in long format
 		ls -a
-			list all files, not in long format, including the hidden ones 
+			list all files, not in long format, including the hidden ones
+		ls -r
+			reverse order listing. 
 
 less
 	view text files

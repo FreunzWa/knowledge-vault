@@ -1,0 +1,61 @@
+Introduction:
+
+
+Basics
+	learn from data to make decision/ predcitions
+	identify patterns without explicit programming
+
+
+GLOSSARY
+	Deep learning
+		refers to neural networks with multiple hidden layers
+		that incresasinly abstract representation of the input
+		data.
+		eg, as data is fed through each layer patterns emerge, eg
+			edges on an object, ==> more and more specific
+
+
+	Convolutatiional neural networks
+		multi-layer nerual networks that assume the input data to be images
+
+
+
+	supervised vs unsupervised learning
+		supervised is the most common type of algorithm for learning
+
+		supervised 
+			a dataset is provided in which the correct choice/ decisions
+			data is given to teh machine. in this way the system can 
+			learn from incorrect decisions and refine weightings as 
+			a result.
+
+	other types of learning algorithms:
+		reinforcement learning/ recommender systems.
+
+
+
+
+
+
+Programming lanagues
+
+	sklearn (gold standard python lib for general purpsoe machine learning)
+
+	R: caret (for R)
+
+
+
+
+
+
+
+
+
+GOALS:
+
+
+Try to solve projects:
+	Titanic survivor prediction
+
+Write an algorithm from scratch
+

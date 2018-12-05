@@ -1,0 +1,42 @@
+apt-get {program called "aptitude
+"}
+	program to install applications from repositories
+
+	apt-get <action> <package>
+
+	requires superuser permission
+
+
+
+	apt-get install <package>
+
+
+	apt-get remove <package>
+		removes a given package already installed to the system.
+
+
+	APT-CACHE
+		either check available online packages or see already installed
+		packages
+
+	apt-cache search <package-name>* {search for all files starting with package-name}
+
+	apt-cache policy <package-name>
+
+
+
+	sudo apt-get upgrade
+		goes through all packages and checks if they are updates available
+
+
+	INSTALLING PACKAGES NOT IN REPOSITORIES
+
+		eg google chrome cannot be located in repos, manually install
+		and download .deb files, which will use the apt package
+		manager for the installation process.
+
+		eg installing the chrome package in the currnet working drectory
+
+		sudo dpkg -i ./google-chrome-stable_current_amd64.deb
+			use this for debian packages which have already been downloaded
+			it will unpackage and install the package to teh system

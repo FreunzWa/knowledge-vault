@@ -1,0 +1,31 @@
+
+
+modules/ packages for machine learning
+	
+	Keras
+		sequential model:
+			a linear stack of neural nertwork layers, good for building 
+			CNNs
+
+		Core layers:
+			Dense, drouput, activation, flatten
+				layers used in almost every neural network
+
+		convolutional layers to help with image data
+			Convolution2D, MaxPooling2D
+
+
+	Theano
+		module for evaluating matrix data
+
+		must preprocess data to specify a depth channel
+
+
+
+Pre-processing data for machine learning
+		normalise values between 0-1
+
+
+Model architecture
+
+	deep field, start by sepcifying 

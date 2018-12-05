@@ -1,0 +1,103 @@
+
+re module 
+=============
+re module added python 1.5. regex module was removed in python 2.5
+regexes are highly specialised embedded programming language.
+specify set of possible strings want to match.
+can use standard characters/ metacharacters to match strings. 
+
+
+USE:
+======
+
+regexes are compiled into pattern objects, have methods for
+various operations such as searching for pattern matches / 
+performing string substitutions
+
+import re
+
+p = re.compile(pattern, flags)
+use the r"string" notation, to avoid having to use ++/ escape chars
+
+once have compiled reg expression, can use the following:
+	match()
+		only returns match if matches from beginning of string
+	search()
+		scans through entire strings and checks for matche.
+	findall()
+		returns list containing all matches strings
+	finditer()
+		returns sequences of match objects.
+
+match and search return a match object ontianin information abt the match
+
+MATCH-object
+	after returning match object, can use following functions:
+		group()   {return string matched by RE}
+		start()   {return statting pos}
+		end()	 {returning ending pos}
+		span()		{tuple, starting pos and ending pos}
+
+
+
+
+METACHARACTERS
+===============
+. ^ $ * + ? { } [ ] \ | ( )
+
+
+[] :character class
+	used for specifying character class
+	either individual [abcdefg]
+	or range [a-g]
+	metacharacters lose special meaning in char classes, 
+		however ^ gains function:
+
+	^ :complement
+		eg [^5], match any characters except for 5
+
+/ :escape
+	escapes all other metacharacters (\\, or \[ for example)
+
+	\d
+		matches any decimal digit (thus equal to [0-9])
+
+	\D
+		matches any non digit char (thus equal to [^0-9])
+
+	\s
+		matches any whitespace char, equivalent to [^ \t\n\f\r\v]
+
+	\w
+		matches any non alphanumeric character, equiv to 
+			[^a-zA-Z0-9]
+
+	can be included in classes:
+		[\s,.]
+			will match any whitespace or ',' or '.'
+
+
+* :repeat character (not wild)
+	allows variable repeats of a char to still be matched
+
+	ca*t
+		will match ct, cat, caat, caaaat etc.
+
+	+ 
+		is simlar to *, but matches 1 or more times (instead of 0)
+			so will not match ct in the above example. 
+
+	?
+		is similar, but only matches 0 or 1 times. think of it
+		as being an optional character
+			eg home-?brew matches homebrew or home-brew
+
+
+
+
+
+FLAGS/ OPTIONS:
+==================
+
+	re.IGNORECASE
+		ignores caps.

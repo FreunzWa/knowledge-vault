@@ -10,6 +10,31 @@ KERNEL
 	computer program at core of operating system, controls everything in the system. 
 	most systems, one of first programs loaded after the bootloader
 
+	handles rest of start up after bootloader, and input/output requests
+	from software, communicates with devices, memory, CPU. 
+
+	kernel code loaded into separate area of emmory insulated from 
+	other programs. "kernel space"
+	system call is made when a process makes a request to the kernel.
+
+	CPU:
+		kernel decides when the many running programs should be allocated
+		to the processors
+	RAM:
+		RAM used to store program instructions + data, both need to 
+		be present for program to execute. 
+	I/O devices
+		allocates requests from applciations to peform IO to an appropriate device and provides methods (aPI) for the device.
+
+
+BOOTLOADER
+	@computer powered of, software remains stored in non volateile memory, including
+	the operating system. 
+
+	@powered on == small program in read only memory (ROM), to load the OS
+	and other related software and data from non volatile memory
+	this "small program" is the bootstrap loader (aka bootstrap or bootloader), the only job of this program is to load other
+	data and programs into RAM, and then execute them. 
 
 
 
